@@ -4,12 +4,14 @@
   box-sizing: border-box;
   margin-block: 0;
 }
+
 ul,
 ol {
   list-style: none;
   padding-inline: 0;
   margin-inline: 0;
 }
+
 html {
   font-family: Montserrat;
   font-family: Montserrat;
@@ -20,10 +22,12 @@ html {
 
 body {
   font-size: 62.5%;
+  background-color: #fafafa;
 }
 
 main {
   padding: 3.2em 1.2em 0;
+  max-width: 37.4em;
 }
 
 a {
@@ -70,6 +74,10 @@ section {
 }
 .ingredient__card {
   padding-top: 1.3em;
+  padding-bottom: 2em;
+}
+.section__ingredients {
+  padding-bottom: 0;
 }
 
 .section__subtitle {
@@ -85,14 +93,14 @@ section {
   margin-bottom: 1.33em;
 }
 
-.ingredient__card ul li {
+.ingredient__card label {
   font-size: 1.4em;
   line-height: 1.78em;
 }
 
 .section__cooking-info {
-  width: 375px;
-  height: 97px;
+  width: 37.5em;
+  height: 9.7em;
 }
 
 section ol li {
@@ -103,15 +111,15 @@ section ol li {
 .main__illustration {
   display: flex;
   justify-content: center;
-  max-height: 21.4em;
+  max-height: 23.7em;
   overflow: hidden;
-  padding-bottom: 24px;
+  padding-bottom: 2.4em;
 }
 
 .main__illustration img {
   display: block;
-  max-width: 35.2em;
-
+  max-width: 35.1em;
+  min-height: 20.2em;
   border-radius: 12px;
 }
 
@@ -146,4 +154,66 @@ ol li p {
 .section__instructions ol {
   padding-top: 2.8em;
   padding-left: 5.1em;
+}
+
+.section__instructions ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+
+.section__instructions ol li {
+  position: relative;
+  counter-increment: my-awesome-counter;
+}
+
+.section__instructions ol li::after {
+  position: absolute;
+  content: counter(my-awesome-counter);
+  top: 0.58em;
+  left: -1.375em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+  font-family: Playfair Display;
+  font-size: 1.5rem;
+  line-height: 1.33em;
+  transform: translateX(-50%) translateY(-50%);
+  font-weight: bold;
+}
+
+.section__instructions ol li::before {
+  content: '';
+  position: absolute;
+  background-color: #f2994a;
+  font-size: 1.5rem;
+  top: 0;
+  left: -2.125em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 6px;
+}
+
+.ingredient__card ul li {
+  padding-left: 3em;
+  position: relative;
+}
+
+.ingredient__card ul li {
+  min-height: 3.3em;
+  padding-bottom: 1em;
+}
+
+.ingredient__card ul li label:hover {
+  cursor: pointer;
+}
+
+.ingredient__card ul li input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #828282;
 }
