@@ -3,3 +3,72 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-family: Montserrat;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+body {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+h1 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4em;
+  line-height: 1.33em;
+}
+
+.header__paragraph {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.25em;
+
+  /* Gray 2 */
+
+  color: #4f4f4f;
+}
+
+.section__title {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 1.33em;
+  /* identical to box height */
+
+  /* Gray 1 */
+
+  color: #333333;
+}
+
+.section__subtitle {
+  font-family: Playfair Display;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.8em;
+  line-height: 1.33em;
+
+  /* Gray 1 */
+
+  color: #333333;
+}
+
+.ingredient__card ul li {
+  font-size: 1.4em;
+  line-height: 1.78em;
+}
+
+section ol li {
+  font-size: 1.6em;
+  line-height: 1.5em;
+}
