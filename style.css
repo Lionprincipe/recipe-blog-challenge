@@ -72,3 +72,31 @@ section ol li {
   font-size: 1.6em;
   line-height: 1.5em;
 }
+
+.main__illustration {
+  width: 352px;
+  height: 213.83px;
+  border-radius: 12px;
+}
+
+.main__illustration img {
+  display: block;
+  max-width: 352px;
+  height: 213.83px;
+  border-radius: 12px;
+}
+
+.header__sub-container {
+  position: relative;
+  padding-left: 25px;
+}
+
+.header__sub-container .material-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.3em;
+  line-height: 0.62em;
+  transform: rotate(90deg);
+  color: #c4c4c4;
+}
