@@ -23,6 +23,8 @@ html {
 body {
   font-size: 62.5%;
   background-color: #fafafa;
+  position: relative;
+  padding-bottom: 17em;
 }
 
 main {
@@ -72,12 +74,13 @@ section {
 
   color: #333333;
 }
+
 .ingredient__card {
   padding-top: 1.3em;
   padding-bottom: 2em;
 }
 .section__ingredients {
-  padding-bottom: 0;
+  padding-bottom: 1em;
 }
 
 .section__subtitle {
@@ -99,13 +102,67 @@ section {
 }
 
 .section__cooking-info {
-  width: 37.5em;
+  width: 100%;
   height: 9.7em;
 }
 
-section ol li {
-  font-size: 1.6em;
-  line-height: 1.5em;
+.section__cooking-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section__cooking-info ul li {
+  width: 11em;
+  display: flex;
+  align-items: center;
+}
+
+.section__cooking-info ul li div {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__cooking-info ul li .material-icons {
+  padding-right: 0.35em;
+  font-size: 1.7em;
+  line-height: 1em;
+}
+
+.section__cooking-info ul li:first-of-type {
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+.section__cooking-info ul li:first-child .section__cooking-info__value,
+.section__cooking-info ul li:first-child .material-icons {
+  color: #f2994a;
+}
+.section__cooking-info__label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.8em;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  /* Gray 4 */
+
+  color: #bdbdbd;
+}
+.section__cooking-info__value {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.2em;
+
+  /* Gray 1 */
+
+  color: #333333;
 }
 
 .main__illustration {
@@ -139,26 +196,16 @@ section ol li {
   color: #c4c4c4;
 }
 
-ol li {
-  margin-bottom: 2.4em;
-}
-ol li p {
-  -webkit-hyphens: none;
-  hyphens: none;
-}
-
 .section__instructions .section__title {
   line-height: 1.33em;
   font-size: 2.4em;
 }
-.section__instructions ol {
-  padding-top: 2.8em;
-  padding-left: 5.1em;
-}
 
 .section__instructions ol {
-  list-style: none;
   counter-reset: my-awesome-counter;
+  line-height: 1.5em;
+  padding-top: 2.8em;
+  padding-left: 5.1em;
 }
 
 .section__instructions ol li {
@@ -166,8 +213,13 @@ ol li p {
   counter-increment: my-awesome-counter;
 }
 
+.section__instructions ol li:not(:last-child) {
+  margin-bottom: 4.25em;
+}
+
 .section__instructions ol li::after {
   position: absolute;
+  font-size: 1.6em;
   content: counter(my-awesome-counter);
   top: 0.58em;
   left: -1.375em;
@@ -195,14 +247,20 @@ ol li p {
   border-radius: 6px;
 }
 
+.section__instructions ol li p {
+  font-size: 1.6em;
+  line-height: 1.5em;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
 .ingredient__card ul li {
-  padding-left: 3em;
   position: relative;
+  padding-left: 3em;
+  min-height: 3.3em;
 }
 
-.ingredient__card ul li {
-  min-height: 3.3em;
-  padding-bottom: 1em;
+.ingredient__card ul li:not(:last-child) {
+  padding-bottom: 1.5em;
 }
 
 .ingredient__card ul li label:hover {
@@ -213,7 +271,167 @@ ol li p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 21px;
-  height: 21px;
+  width: 1.5em;
+  height: 1.5em;
   border: 1px solid #828282;
+}
+
+footer {
+  position: absolute;
+  min-width: 35em;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 2.4em;
+}
+
+.footer__sign {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4em;
+  line-height: 1.21em;
+  text-align: center;
+  color: #a9a9a9;
+}
+
+.footer__sign strong {
+  text-decoration: underline;
+}
+
+.recipe__source {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.5em;
+
+  color: #bdbdbd;
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    font-size: calc(100vw * 10 / 375);
+  }
+  main {
+    max-width: auto;
+  }
+}
+
+@media only screen and (min-width: 716px) {
+  body {
+    font-size: calc(716px * 10 / 375);
+  }
+  main {
+    max-width: 716px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 996px) {
+  body {
+    font-size: 62.5%;
+    padding-bottom: 13.4em;
+  }
+  main {
+    max-width: 96.9em;
+    margin: 0 auto;
+    padding: 5.2em 0 0;
+  }
+
+  h1 {
+    font-size: 4.8em;
+    line-height: 1.33em;
+    padding-bottom: 0.25em;
+  }
+
+  .header__paragraph {
+    font-size: 1.4em;
+    line-height: 1.21em;
+    max-width: 42.29em;
+  }
+  .main__illustration {
+    max-height: 47em;
+    overflow: hidden;
+    border-radius: 12px;
+    padding-bottom: 0;
+    margin-bottom: 4.8em;
+  }
+  .section__title {
+    font-size: 2.4em;
+    line-height: 1.33em;
+  }
+  .section__subtitle {
+    font-size: 1.8em;
+    line-height: 1.33em;
+  }
+
+  .main__illustration img {
+    display: block;
+    max-width: 96.9em;
+    border-radius: 12px;
+  }
+
+  main {
+    position: relative;
+  }
+
+  .section__cooking-info {
+    position: absolute;
+    height: auto;
+    right: 0;
+    display: block;
+    width: 21.6em;
+    min-height: 36.7em;
+    background: #ffffff;
+    box-shadow: 0px 0px 2em rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 0;
+    padding-left: 4em;
+    padding-top: 5.7em;
+  }
+
+  .ingredient__card label {
+    font-size: 1.6em;
+    line-height: 1.56em;
+  }
+
+  .ingredient__card ul li {
+    padding-left: 3.8em;
+  }
+
+  .section__instructions,
+  .section__ingredients {
+    max-width: 58.4em;
+  }
+
+  .section__instructions {
+    padding-bottom: 5.7em;
+  }
+
+  .section__cooking-info__label {
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+
+  .section__cooking-info__value {
+    font-size: 1.4em;
+    line-height: 1.21em;
+  }
+
+  .section__cooking-info ul li .material-icons {
+    padding-right: 0.52em;
+    font-size: 2.7em;
+    line-height: 1.08em;
+  }
+
+  .section__cooking-info ul li:first-of-type,
+  .section__cooking-info ul li {
+    width: 100%;
+
+    padding-bottom: 4.2em;
+  }
+
+  .section__instructions ol li:not(:last-child) {
+    margin-bottom: 3.5em;
+  }
 }
